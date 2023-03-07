@@ -1,0 +1,34 @@
+<template>
+    <lightning-card title="Registration form" if:true={showForm}>
+        <div class="set-margin-16">
+            <lightning-input label="Name" onchange={nameHandler}></lightning-input>
+            <lightning-input label="Age" type="number" onchange={ageHandler}></lightning-input>
+            <lightning-input label="Email" type="email" onchange={emailHandler}></lightning-input>
+            <lightning-input label="Date of Birth" type="date" onchange={dobHandler}></lightning-input>
+            <lightning-input label="Profile Image" type="file" onchange={profileImageHandler}></lightning-input>
+            <lightning-input label="Password" type="password" onchange={passwordHandler}></lightning-input>
+            <div class="set-margin-top-16">
+                <lightning-button label="Submit" onclick={submitHandler}></lightning-button>
+            </div>
+        </div>
+    </lightning-card>
+    <lightning-card title="Entered Information" if:true={showInformation}>
+        <div class="set-margin-16">
+            <lightning-formatted-text value={name}></lightning-formatted-text>
+            <br/>
+            <lightning-formatted-text value={age}></lightning-formatted-text>
+            <br/>
+            <lightning-formatted-text value={email}></lightning-formatted-text>
+            <br/>
+            <lightning-formatted-text value={dob}></lightning-formatted-text>
+            <br/>
+            <lightning-formatted-text value={profileImage}></lightning-formatted-text>
+            <br/>
+            <lightning-formatted-text value={password}></lightning-formatted-text>
+            <br/>
+            <div class="set-margin-top-16">
+                <lightning-button label="Reset" onclick={resetForm}></lightning-button>
+            </div>
+        </div>
+    </lightning-card>
+</template>

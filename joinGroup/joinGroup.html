@@ -1,0 +1,10 @@
+<template>
+    <lightning-card>
+        <div class="setmargin-16">
+            <lightning-formatted-text value="Join Group Forum" ></lightning-formatted-text>
+            <lightning-input label="Enter your name to join group" class="setmargin-16 inputBox" if:true={showInputBox}  data-input></lightning-input>
+            <lightning-button label="Join" class="setmargin-16" if:true={showJoinButton} onclick={joinButtonClick}></lightning-button>
+            <h1 class="setmargin-16 hed" if:true={showJoinMessage}>thank you for joining Name: {userName}</h1>
+        </div>
+    </lightning-card>
+</template>

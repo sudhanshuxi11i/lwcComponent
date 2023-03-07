@@ -1,0 +1,18 @@
+<template>
+    <lightning-card>
+        <template iterator:it={products}>
+            <div key={it.value.id}>
+                <p lwc:if={it.first}>
+                    First Name:{it.value.Name} Price:{it.value.Price} 
+                </p>
+                <p lwc:elseif={it.last}>
+                    Last  Name:{it.value.Name} Price:{it.value.Price} 
+                </p>
+                <p lwc:else>
+                    Name:{it.value.Name} Price:{it.value.Price} 
+                </p>
+
+            </div>
+        </template>
+    </lightning-card>
+</template>
